@@ -1,6 +1,8 @@
 package main
 
 import (
+	"fmt"
+
 	"github.com/gin-gonic/gin"
 	"github.com/yasaricli/gah"
 )
@@ -12,6 +14,7 @@ func main() {
 			"message": "pong",
 		})
 	})
+	fmt.Println("testing bro")
 	api := r.Group("/api")
 	{
 		api.POST("/login", gah.LoginHandler)
